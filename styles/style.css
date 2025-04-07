@@ -1,0 +1,130 @@
+/* -------------------- */
+/* # General Settings # */
+/* -------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --color-yellow: hsl(47, 88%, 63%);
+
+  --color-white: hsl(0, 0%, 100%);
+
+  --color-gray-500: hsl(0, 0%, 42%);
+  --color-gray-950: hsl(0, 0%, 7%);
+
+  /* ----------------------------------- */
+
+  --space-50: 0.25rem;
+  --space-100: 0.5rem;
+  --space-150: 0.75rem;
+  --space-200: 1.5rem;
+}
+
+body {
+  /* Box model */
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+
+  /* Typography */
+  font-family: "Figtree", sans-serif;
+  line-height: 1.5;
+
+  /* Visual */
+  color: var(--color-gray-950);
+  background-color: var(--color-yellow);
+}
+
+/* ---------------- */
+/* # Simple Reset # */
+/* ---------------- */
+
+* {
+  /* Box model */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------- */
+/* # Card Component */
+/* ---------------- */
+
+.card {
+  /* Box model */
+  display: grid;
+  gap: var(--space-200);
+  padding: var(--space-200);
+  max-width: clamp(20.4375rem, 5.352vw + 19.183rem, 24rem);
+
+  /* Visual */
+  background-color: var(--color-white);
+  border: 0.0625em solid;
+  border-radius: 1.25em;
+  box-shadow: 0.5em 0.5em #000;
+}
+
+.card__image {
+  /* Box model */
+  display: block;
+  max-width: 100%;
+
+  /* Visual */
+  border-radius: 0.625em;
+}
+
+.card__content {
+  /* Box model */
+  display: grid;
+  gap: var(--space-150);
+}
+
+.card__content-category {
+  /* Box model */
+  max-width: clamp(4.5625rem, 0.845vw + 4.364rem, 5.125rem);
+  padding-block: var(--space-50);
+  padding-inline: var(--space-150);
+
+  /* Visual */
+  background-color: var(--color-yellow);
+  border-radius: 0.25em;
+}
+
+.card__content-title {
+  /* Typography */
+  font-size: clamp(1.25rem, 0.376vw + 1.162rem, 1.5rem);
+}
+
+.card__content-description {
+  /* Typography */
+  font-size: clamp(0.875rem, 0.188vw + 0.831rem, 1rem);
+
+  /* Visual */
+  color: var(--color-gray-500);
+}
+
+.card__author {
+  /* Box model */
+  align-items: center;
+  display: flex;
+  gap: var(--space-150);
+}
+
+.card__content-category,
+.card__content-date {
+  /* Typography */
+  font-size: clamp(0.75rem, 0.188vw + 0.706rem, 0.875rem);
+}
+
+.card__content-category,
+.card__content-title,
+.card__author {
+  /* Typography */
+  font-weight: 800;
+}
+
+.card__content-date,
+.card__content-description {
+  /* Typography */
+  font-weight: 500;
+}
